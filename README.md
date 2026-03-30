@@ -1,29 +1,33 @@
 ﻿# Incident Horizon
 
-Incident Horizon is a real-time incident command center for engineering teams. It helps teams coordinate during outages with live updates, shared timelines, and post-incident records.
+Incident Horizon is a real-time incident command center for operations teams. It captures incident events, broadcasts updates over WebSockets, and keeps a timeline of decisions for postmortems.
 
-The goal is to show strong full stack engineering under reliability-focused requirements.
+## Current scope
+- Create incident rooms
+- Broadcast live updates to connected clients
+- Store timeline entries for after-action review
 
-## Focus
-- Full stack systems with real-time communication
+## Tech stack
+- Frontend: Vue 3
+- Backend: FastAPI + WebSockets
+- Streaming: Redis Streams (planned integration)
+- Search: Elasticsearch (planned integration)
 
-## Stack
-- Vue, Python, WebSockets, Redis Streams, Elasticsearch
+## Repository layout
+- docs/: incident model and architecture notes
+- src/frontend/: Vue client
+- src/backend/: API + WebSocket service
+- tests/: API, websocket, and load checks
+- infra/: deployment assets and service topology
+- scripts/: local helper scripts
 
-## What I want this repo to demonstrate
-- Realtime architecture choices and tradeoffs
-- Stateful collaboration features across multiple users
-- Operational thinking: observability, replay, and incident history
+## Quick start
+1. Run API server from src/backend.
+2. Run frontend app from src/frontend.
+3. Open two browser tabs and watch live room updates.
 
-## Starter structure
-- docs/: Incident lifecycle, architecture, and roadmap
-- src/: Frontend and backend services
-- tests/: Contract, integration, and load tests
-- infra/: Service topology and deployment assets
-- scripts/: Developer and ops helper scripts
-
-## First build plan
-1. Build incident room creation and live event feed.
-2. Add timeline playback and decision log.
-3. Integrate alert/event ingestion from external systems.
-4. Add dashboards and alerting for system health.
+## Roadmap
+1. Add Redis-backed event stream.
+2. Add Elasticsearch indexing for incident search.
+3. Add on-call timeline annotations and export.
+4. Add SLO dashboard integration.

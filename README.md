@@ -1,43 +1,29 @@
 ﻿# Incident Horizon
 
-A real-time incident command center for ops teams with live collaboration, timeline playback, and postmortem artifacts.
+Incident Horizon is a real-time incident command center for engineering teams. It helps teams coordinate during outages with live updates, shared timelines, and post-incident records.
 
-## Why this project stands out
-- Demonstrates depth in Realtime Full Stack + Reliability.
-- Designed as a production-style portfolio case with measurable outcomes.
-- Includes architecture, roadmap, and implementation scaffolding that can be expanded quickly.
+The goal is to show strong full stack engineering under reliability-focused requirements.
 
-## Primary focus
-- Realtime Full Stack + Reliability
+## Focus
+- Full stack systems with real-time communication
 
-## Tech stack
-- Vue, Python, WebSockets, Redis Streams, Elastic
+## Stack
+- Vue, Python, WebSockets, Redis Streams, Elasticsearch
 
-## Portfolio goals
-- Build a realistic end-to-end system, not just a demo.
-- Show technical decision-making and tradeoff thinking.
-- Showcase clean architecture, testing strategy, and delivery readiness.
+## What I want this repo to demonstrate
+- Realtime architecture choices and tradeoffs
+- Stateful collaboration features across multiple users
+- Operational thinking: observability, replay, and incident history
 
-## Starter project structure
-- docs/: Product spec, architecture, ADRs
-- src/: Core implementation
-- tests/: Unit, integration, and e2e test suites
-- infra/: Deployment and infrastructure manifests
-- scripts/: Developer automation scripts
+## Starter structure
+- docs/: Incident lifecycle, architecture, and roadmap
+- src/: Frontend and backend services
+- tests/: Contract, integration, and load tests
+- infra/: Service topology and deployment assets
+- scripts/: Developer and ops helper scripts
 
-## Initial milestones
-1. Define product and technical scope in docs.
-2. Implement a thin vertical slice from user interaction to data persistence.
-3. Add CI checks and observability baseline.
-4. Publish demo assets and architecture diagrams.
-
-## Suggested demo narrative for recruiters
-- Problem: A realistic operational challenge with business impact.
-- Approach: Modern architecture with pragmatic tradeoffs.
-- Result: A maintainable, extensible system with clear product value.
-
-## Next implementation tasks
-- [ ] Write docs/architecture.md and docs/roadmap.md.
-- [ ] Implement core domain models and APIs.
-- [ ] Add seed data and test fixtures.
-- [ ] Add CI workflow and release checklist.
+## First build plan
+1. Build incident room creation and live event feed.
+2. Add timeline playback and decision log.
+3. Integrate alert/event ingestion from external systems.
+4. Add dashboards and alerting for system health.
